@@ -1,0 +1,11 @@
+$Nunito:('Nunito-Regular', 400),
+('Nunito-Medium', 500),
+('Nunito-Light', 300);
+
+@each $name,$weight in $Nunito {
+    @font-face {
+        font-family: 'Nunito';
+        src:url('@/assets/fonts/#{$name}.ttf') format('truetype');
+        font-weight: $weight;
+    }
+}   
