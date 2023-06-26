@@ -1,5 +1,7 @@
 <template>
-  404
+  <section class="notfound">
+    <h1>404</h1>
+  </section>
 </template>
 
 <script>

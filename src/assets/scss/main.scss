@@ -64,6 +64,17 @@
     }
 }
 
+.notfound{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    & h1{
+        color: #292929;
+        font-size: 50px;
+    }
+}
+
 @media screen and (max-width:920px) {
     .home {
         &__wrap {
