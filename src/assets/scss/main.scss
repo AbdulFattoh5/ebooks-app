@@ -11,10 +11,128 @@
     font-family: 'Nunito', sans-serif;
 }
 
-.container{
+.container {
     max-width: 1260px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.home {
+    margin-top: 90px;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__desc {
+        max-width: 600px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &-title {
+            color: #292929;
+            font-size: 50px;
+            font-weight: 700;
+        }
+
+        &-p {
+            color: #828282;
+            font-size: 30px;
+        }
+
+        &-btns {
+            &-btn {
+                background: #56209F;
+                color: white;
+                padding: 16px 50px;
+                font-size: 18px;
+                border-radius: 10px;
+                margin-right: 15px;
+            }
+        }
+    }
+
+    &__banner {
+        object-fit: cover;
+        height: 450px;
+    }
+}
+
+@media screen and (max-width:920px) {
+    .home {
+        &__wrap {
+            flex-direction: column-reverse;
+            gap: 30px;
+        }
+
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .home {
+        &__banner {
+            height: 350px;
+        }
+    }
+}
+
+@media screen and (max-width:410px) {
+    .home {
+        &__desc {
+            gap: 0;
+
+            &-title {
+                font-size: 40px;
+            }
+
+            &-p {
+                font-size: 20px;
+            }
+
+            &-btns {
+                & img {
+                    object-fit: cover;
+                    height: 50px;
+                }
+            }
+        }
+
+        &__banner {
+            height: 280px;
+        }
+    }
+}
+
+@media screen and (max-width:350px) {
+    .home {
+        margin-top: 50px;
+
+        &__banner {
+            height: 240px;
+        }
+
+        &__wrap{
+            gap: 10px;
+        }
+
+        &__desc{
+            &-title{
+                font-size: 35px;
+            }
+            &-p{
+                font-size: 17px;
+            }
+
+            &-btns-btn{
+                padding: 10px 30px;
+            }
+        }
+    }
 }
