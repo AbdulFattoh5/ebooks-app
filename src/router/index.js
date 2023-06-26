@@ -12,12 +12,12 @@ const routes = [
     component: Home
   },
   {
-    path: '/',
+    path: '/main',
     name: 'main',
     component: load('Main')
   },
   {
-    path: '/',
+    path: '/search',
     name: 'search',
     component: load('Search')
   },

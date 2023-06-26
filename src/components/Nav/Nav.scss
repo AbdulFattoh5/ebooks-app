@@ -1,0 +1,102 @@
+.header {
+    background: #23212A;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 108px;
+
+        &-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            & img {
+                width: 40px;
+                height: 40px;
+            }
+
+            & span {
+                color: white;
+                font-weight: 600;
+                font-size: 30px;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+
+        &-link {
+            color: white;
+            font-size: 20px;
+            transition: 0.3s;
+            position: relative;
+
+            &.router-link-exact-active {
+                color: white
+            }
+
+            &::before {
+                content: "";
+                background: white;
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: -41px;
+                border-radius: 0 0 10px 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: 0.3s;
+            }
+
+            &.router-link-exact-active::before {
+                width: 70px;
+                height: 9px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    .header{
+        &__menu{
+            gap: 40px;
+        }
+    }
+}
+
+@media screen and (max-width:510px){
+    .header{
+        padding: 3px 0 10px 0;
+        &__wrap{
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        &__menu{
+            &-link{
+                &.router-link-exact-active::before {
+                    width: 55px;
+                    height: 5px;
+                }
+
+                &::before {
+                    content: "";
+                    background: white;
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    top: 23px;
+                    border-radius: 0 0 10px 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+}
