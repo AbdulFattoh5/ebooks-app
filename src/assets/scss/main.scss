@@ -1,5 +1,6 @@
 @import './fonts.scss';
 @import '@/components/Nav/Nav.scss';
+@import '@/components/ebook/ebook.scss';
 
 * {
     margin: 0;
@@ -64,14 +65,83 @@
     }
 }
 
-.notfound{
+.notfound {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    & h1{
+
+    & h1 {
         color: #292929;
         font-size: 50px;
+    }
+}
+
+.search {
+    min-height: 80vh;
+    background: url(../img/search-banner.jpeg) no-repeat center/cover;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        min-height: 75vh;
+        color: black;
+    }
+
+    &_h {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    &_p {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    &__input {
+        max-width: 550px;
+        width: 100%;
+        display: flex;
+
+        &-main {
+            border-radius: 50px;
+            outline: none;
+            width: 100%;
+            padding-right: 45px;
+            padding: 1.4rem 4rem 1.4rem 2rem;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        &-btn {
+            background: none;
+            border: none;
+            margin-left: -55px;
+            cursor: pointer;
+            font-size: 25px;
+        }
+    }
+
+    &__res{
+        margin-top: 50px;
+
+        &-h{
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: black;
+            margin-bottom: 30px;
+        }
+
+        &-wrap{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
     }
 }
 
@@ -90,6 +160,18 @@
     .home {
         &__banner {
             height: 350px;
+        }
+    }
+
+    .search {
+        &_h {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        &_p {
+            font-size: 18px;
+            text-align: center;
         }
     }
 }
@@ -129,19 +211,20 @@
             height: 240px;
         }
 
-        &__wrap{
+        &__wrap {
             gap: 10px;
         }
 
-        &__desc{
-            &-title{
+        &__desc {
+            &-title {
                 font-size: 35px;
             }
-            &-p{
+
+            &-p {
                 font-size: 17px;
             }
 
-            &-btns-btn{
+            &-btns-btn {
                 padding: 10px 30px;
             }
         }

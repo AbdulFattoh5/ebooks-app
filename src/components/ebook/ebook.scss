@@ -1,0 +1,30 @@
+.ebook{
+    background: rgb(239, 239, 239);
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &__img{
+        object-fit: cover;
+        height: 150px;
+    }
+
+    &__nf{
+        object-fit: cover;
+        width: 200px;
+    }
+
+    &__title{
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    &__info{
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+}
