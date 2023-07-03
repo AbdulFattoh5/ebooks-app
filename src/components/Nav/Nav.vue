@@ -24,6 +24,14 @@
 
 <script>
 export default {
+  methods: {
+    GetMainContent() {
+      this.$store.dispatch("GetMainContent");
+    },
+  },
+  created(){
+    this.GetMainContent()
+  }
 };
 </script>
 

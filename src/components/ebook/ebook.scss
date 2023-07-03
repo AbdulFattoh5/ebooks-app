@@ -1,4 +1,4 @@
-.ebook{
+.ebook {
     background: rgb(239, 239, 239);
     text-align: center;
     height: 100%;
@@ -8,23 +8,93 @@
     justify-content: space-between;
     cursor: pointer;
 
-    &__img{
+    &__img {
         object-fit: cover;
         height: 150px;
     }
 
-    &__nf{
+    &__nf {
         object-fit: cover;
         width: 200px;
     }
 
-    &__title{
+    &__title {
         font-size: 18px;
         margin: 5px 0;
     }
 
-    &__info{
+    &__info {
         font-size: 15px;
         margin-bottom: 5px;
+    }
+}
+
+.ebookItem {
+    &__btn {
+        font-size: 18px;
+        color: black;
+        font-weight: 600;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 40px;
+        & i {
+            font-size: 18px;
+        }
+    }
+
+    &__wrap{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        gap: 20px;
+    }
+
+    &__desc{
+        max-width: 800px;
+        width: 100%;
+    }
+
+    &__img{
+        object-fit: cover;
+        height: 400px;
+    }
+
+    &__title{
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    &__p{
+        margin-bottom: 12px;
+        font-size: 18px;
+    }
+
+    &__link{
+        background: black;
+        color: white;
+        border-radius: 5px;
+        padding: 8px 52px;
+        margin: 10px 0 20px 0;
+    }
+}
+
+@media screen and (max-width:650px){
+    .ebookItem{
+        &__wrap{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__desc{
+            text-align: center;
+        }
+
+        &__img{
+            object-fit: cover;
+            height: 300px;
+        }
     }
 }

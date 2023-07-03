@@ -94,6 +94,7 @@
     &_h {
         font-size: 30px;
         font-weight: 600;
+        text-align: center;
     }
 
     &_p {
@@ -145,6 +146,32 @@
     }
 }
 
+.maincontent{
+    margin-bottom: 50px;
+    min-height: 80vh;
+    background: url(../img/main-banner.jpeg) no-repeat center/cover;
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        min-height: 75vh;
+        color: white;
+    }
+
+    &_h {
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &_p {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
 @media screen and (max-width:920px) {
     .home {
         &__wrap {
@@ -164,6 +191,18 @@
     }
 
     .search {
+        &_h {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        &_p {
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+
+    .maincontent {
         &_h {
             font-size: 25px;
             font-weight: 600;

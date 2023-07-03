@@ -29,21 +29,17 @@
   <section class="search__res" v-if="books">
     <div class="container">
       <h4 class="search__res-h">Your search result</h4>
-      <div class="search__res-wrap">
-        <div v-for="(books, i) in books" :key="i">
-          <EbookVue :books="books" />
-        </div>  
-      </div>
+      <Ebooks />
     </div>
   </section>
 </template>
 
 <script>
-import EbookVue from "@/components/ebook/Ebook.vue";
+import Ebooks from "@/components/ebook/Ebooks.vue";
 import { mapState } from "vuex";
 export default {
   components: {
-    EbookVue,
+    Ebooks,
   },
   data() {
     return {
